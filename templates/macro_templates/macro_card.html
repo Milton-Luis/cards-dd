@@ -1,0 +1,68 @@
+{% macro card(classe, tipo, nome, tempo, alcance, componentes, material, duracao, nivel, imagem, descricao) %}
+<div class="cards">
+    <div class="card-side">
+        <p>Classe: {{ classe }}</p>
+    </div>
+    <div class="card" id={{tipo}}>
+        <div class="card-header">
+            <div class="nome ">
+                <h4>{{ nome }}</h4>
+            </div>
+            <div class="nivel">
+                {% if nivel == 0 %}
+                    <h4 class="nivel-desc"> Truque</h4>
+                {% else %}
+                    <h4 class="nivel-desc">{{ nivel }}</h4>
+                {% endif %}
+            </div>
+        </div>
+        <div class="card-nav">
+            <div class="info">
+                <div class="conjuracao">
+                    <sub class="conjuracao-desc">
+                        Tempo de conjuração: {{ tempo }}
+                    </sub>
+                </div>
+
+                <div class="alcance">
+                    <sub class="alcance-desc">
+                        Alcance: {{ alcance }}
+                    </sub>
+                </div>
+
+                <div class="componentes">
+                    <sub class="componentes-desc">
+                        Componentes:
+                        {% if "M" in componentes %}
+                        {{ componentes }}
+                        <!-- <select name="materials" id="">
+                                        <option value="{{ material }}">{{ material }}<br></option>
+                                       
+                                    </select> -->
+                        {% else %}
+                        {{ componentes }}
+                        {% endif %}
+                    </sub>
+
+                </div>
+                <div class="duracao">
+                    <sub class="duracao-desc">
+                        Duração: {{ duracao }}
+                    </sub>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="card-body">
+            <!-- <img class="bg-img" src="{{imagem}}" alt=""> -->
+            <sub class="descricao">{{ descricao }}
+            </sub>
+        </div>
+        <div class="card-footer">
+            <h3 class="footer-tipo">{{tipo}}</h3>
+        </div>
+    </div>
+</div>
+{% endmacro %}
