@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+
+{% from "macro_templates/macro_card.html" import card %}
+
+{% block content %}
+<main>
+
+    {% for data in datas %}
+        {{ card(data.classes|join(', '),
+                data.tipo,
+                data.nome,
+                data.tempo,
+                data.alcance,
+                data.componentes|join(', '),
+                data.material|join(', '),
+                data.duracao,
+                data.nivel,
+                data.imagem,
+                data.descricao|safe) }}
+    {% endfor %}
+</main>
+{% endblock content %}
