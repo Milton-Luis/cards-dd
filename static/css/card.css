@@ -1,0 +1,121 @@
+.cards {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+
+.card-side {
+    max-width: 1.6rem;
+    height: 26.22rem;
+    background-image: linear-gradient(to left, black, gray);
+    border-radius: 50px 0px 0px 50px;
+    display: flex;
+    align-items: center;
+}
+
+.card-side>p {
+    text-align: center;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: #fff;
+    position: relative;
+    left: -10px;
+    font-size: 11pt;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    max-width: 16rem;
+    height: 26rem;
+    border: 2px solid black;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    margin: 10px;
+    width: 14.3rem;
+    max-height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 2px solid lightgray;
+    position: relative;
+    z-index: 1;
+}
+
+.nome {
+    padding: 0px 10px;
+}
+
+.nome>h4 {
+    font-size: 12pt;
+}
+/* .nivel{
+    border-radius: 50%;
+    width: 60px;
+    height: 50px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50px;
+    left: 185px;
+} */
+
+.nivel-desc {
+    color: #000;
+    font-size: 13pt;
+    padding-right: 10px;
+}
+
+.card-nav {
+    margin: 0px 10px;
+    width: 14.3rem;
+    height: 7.5rem;
+}
+
+.card-body {
+    margin: 0px 10px;
+    width: 210px;
+    height: 12.5rem;
+    background-color: #fff;
+    border: 2px solid lightgray;
+    border-radius: 10px 0px 0px 10px;
+    text-align: justify;
+    overflow-y: scroll;
+    padding: 1px 8px;
+}
+
+.info {
+    color: #fff;
+    text-align: justify;
+}
+
+.bg-img {
+    width: 346px;
+    position: relative;
+    top: 50px;
+    left: -40px;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.descricao {
+    font-size: 11pt;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    height: 1rem;
+    position: relative;
+    top: 58px;
+}
